@@ -1,19 +1,16 @@
 import styles from "./NewPost.module.css";
 import { useState } from "react";
 
-export default function NewPost({ text, onBodyChange }) {
-    const [name, setName] = useState("");
-
+export default function NewPost({ body, onBodyChange, onAuthorChange }) {
     return (
         <form className={styles.form}>
             <p>
-                <label htmlFor="body">Text</label>
+                <label htmlFor="body">Body</label>
                 <textarea id="body" required rows={3} onChange={onBodyChange} />
             </p>
-            <p>{text}</p>
             <p>
                 <label htmlFor="name">Your name</label>
-                <textarea type="text" id="name" required />
+                <textarea type="text" id="name" required onChange={onAuthorChange} />
             </p>
         </form>
     );
