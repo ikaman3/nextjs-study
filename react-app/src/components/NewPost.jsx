@@ -1,5 +1,4 @@
-import styles from "./NewPost.module.css";
-import { useState } from "react";
+import styles from './NewPost.module.css';
 
 export default function NewPost({ body, onBodyChange, onAuthorChange }) {
     return (
@@ -10,7 +9,12 @@ export default function NewPost({ body, onBodyChange, onAuthorChange }) {
             </p>
             <p>
                 <label htmlFor="name">Your name</label>
-                <textarea type="text" id="name" required onChange={onAuthorChange} />
+                <textarea
+                    type="text"
+                    id="name"
+                    required
+                    onChange={onAuthorChange}
+                />
             </p>
         </form>
     );

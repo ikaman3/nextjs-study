@@ -1,5 +1,5 @@
 // classes or style 원하는 이름으로
-import classes from "./Post.module.css";
+import classes from './Post.module.css';
 
 function Post({ author, body }) {
     return (
