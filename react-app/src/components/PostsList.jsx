@@ -5,7 +5,7 @@ import NewPost from './NewPost';
 import Modal from './Modal';
 import styles from './PostsList.module.css';
 
-export default function PostsList() {
+export default function PostsList({ isPosting, onModalIsVisible }) {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
 
@@ -19,15 +19,17 @@ export default function PostsList() {
 
     return (
         <>
-            <Modal>
-                <NewPost
-                    onBodyChange={handleBodyChange}
-                    onAuthorChange={handleAuthorChange}
-                />
-            </Modal>
+            {isPosting && (
+                <Modal onModalIsVisible={onModalIsVisible}>
+                    <NewPost
+                        onBodyChange={handleBodyChange}
+                        onAuthorChange={handleAuthorChange}
+                    />
+                </Modal>
+            )}
             <ul className={styles.posts}>
                 <Post author={author} body={body} />
-                <Post author={author} body={body} />
+                <Post author="Ikaman" body="아아" />
             </ul>
         </>
     );
