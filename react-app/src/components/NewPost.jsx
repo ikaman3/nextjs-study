@@ -1,6 +1,6 @@
 import styles from './NewPost.module.css';
 
-export default function NewPost({ body, onBodyChange, onAuthorChange }) {
+export default function NewPost({ onBodyChange, onAuthorChange, onCancel }) {
     return (
         <form className={styles.form}>
             <p>
@@ -15,6 +15,12 @@ export default function NewPost({ body, onBodyChange, onAuthorChange }) {
                     required
                     onChange={onAuthorChange}
                 />
+            </p>
+            <p className={styles.actions}>
+                <button type="button" onClick={onCancel}>
+                    Cancel
+                </button>
+                <button type="submit">Submit</button>
             </p>
         </form>
     );

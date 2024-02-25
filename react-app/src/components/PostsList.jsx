@@ -24,6 +24,7 @@ export default function PostsList({ isPosting, onModalIsVisible }) {
                     <NewPost
                         onBodyChange={handleBodyChange}
                         onAuthorChange={handleAuthorChange}
+                        onCancel={onModalIsVisible}
                     />
                 </Modal>
             )}
