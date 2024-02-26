@@ -1,11 +1,22 @@
+import { useState, useEffect } from 'react';
+
 import Post from './Post';
 import NewPost from './NewPost';
 import Modal from './Modal';
 import styles from './PostsList.module.css';
-import { useState } from 'react';
 
 export default function PostsList({ isPosting, onModalIsVisible }) {
     const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        async function fetchPosts() {
+            const response = await fetch('http://localhost:8080/posts');
+            const resData = await response.json();
+            setPosts(resData.posts);
+        }
+
+        fetchPosts();
+    }, [posts]);
 
     function handleAddPost(postData) {
         fetch('http://localhost:8080/posts', {
