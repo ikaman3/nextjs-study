@@ -5,6 +5,7 @@ export default function Controller({ buttonNumbers, onCountChange }) {
       {buttonNumbers.map((value) => {
         return (
           <button
+            type="button"
             key={value} // react에서 같은 컴포넌트를 구분하기 위한 고유한 값
             onClick={() => {
               onCountChange(value)

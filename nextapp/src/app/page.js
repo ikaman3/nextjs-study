@@ -1,9 +1,11 @@
-'use client' // useState 처럼 Client Component가 필요한 경우 작성
+// use client: useState 처럼 Client Component가 필요한 경우 최상단에 작성
+
+'use client'
+
+import { useCallback, useState } from 'react'
 
 import Controller from './_components/Controller'
 import Viewer from './_components/Viewer'
-
-import { useState } from 'react'
 
 export default function Home() {
   const [count, setCount] = useState(0)
@@ -14,21 +16,21 @@ export default function Home() {
   const buttonNumbers = [-1, -10, -100, 100, 10, 1]
 
   // 값을 받아서 count 상태 변수를 업데이트하는 이벤트 핸들러
-  function handleCount(value) {
-    setCount(count + value)
-  }
+  const handleCount = useCallback(
+    (value) => {
+      setCount(count + value)
+    },
+    [count]
+  )
 
   return (
     <div className="Counter">
       <h1>Simple Counter</h1>
       <section>
-        <Viewer count={count}></Viewer>
+        <Viewer count={count} />
       </section>
       <section>
-        <Controller
-          buttonNumbers={buttonNumbers}
-          onCountChange={handleCount}
-        ></Controller>
+        <Controller buttonNumbers={buttonNumbers} onCountChange={handleCount} />
       </section>
     </div>
   )
