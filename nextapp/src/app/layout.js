@@ -18,7 +18,3 @@ export default function RootLayout({ children }) {
 RootLayout.propTypes = {
   children: PropTypes.node,
 }
-
-RootLayout.defaultProps = {
-  children: <div className="Counter" />,
-}
