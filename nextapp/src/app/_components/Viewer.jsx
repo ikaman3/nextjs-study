@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export default function Viewer({ count }) {
   return (
     <div>
@@ -5,4 +7,12 @@ export default function Viewer({ count }) {
       <h2>{count}</h2>
     </div>
   )
+}
+
+Viewer.propTypes = {
+  count: PropTypes.number,
+}
+
+Viewer.defaultProps = {
+  count: 0,
 }
