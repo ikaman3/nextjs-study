@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types'
 
-export default function Controller({ buttonNumbers, onCountChange }) {
+export default function Controller({
+  buttonNumbers = [-1, -10, -100, 100, 10, 1],
+  onCountChange,
+}) {
   // 부모 컴포넌트로부터 buttonNumbers 배열을 받아 원소의 개수만큼 버튼을 생성
   return (
     <div>
@@ -22,11 +25,6 @@ export default function Controller({ buttonNumbers, onCountChange }) {
 }
 
 Controller.propTypes = {
-  buttonNumbers: PropTypes.arrayOf,
+  buttonNumbers: PropTypes.arrayOf(PropTypes.number).isRequired,
   onCountChange: PropTypes.func,
-}
-
-Controller.defaultProps = {
-  buttonNumbers: [],
-  onCountChange: () => {},
 }

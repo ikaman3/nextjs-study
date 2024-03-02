@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './globals.css'
 
 export const metadata = {
-  title: 'My Counter',
+  title: 'nextapp',
   description: '졸려',
 }
 

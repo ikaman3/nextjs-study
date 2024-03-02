@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export default function Viewer({ count }) {
+export default function Viewer({ count = 0 }) {
   return (
     <div>
       <div>현재 카운트: </div>
@@ -10,9 +10,5 @@ export default function Viewer({ count }) {
 }
 
 Viewer.propTypes = {
-  count: PropTypes.number,
-}
-
-Viewer.defaultProps = {
-  count: 0,
+  count: PropTypes.number.isRequired,
 }
