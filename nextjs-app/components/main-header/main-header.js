@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import NavLink from './nav-link'
 
 // @를 사용하여 자동적으로 프로젝트의 root 디렉터리를 인용할 수 있다.
 import MainHeaderBackground from './main-header-background'
@@ -19,10 +20,10 @@ export default function MainHeader() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link href="/meals">Brows Meals</Link>
+              <NavLink href="/meals">Browse Meals</NavLink>
             </li>
             <li>
-              <Link href="/community">Foodies Community</Link>
+              <NavLink href="/community">Foodies Community</NavLink>
             </li>
           </ul>
         </nav>
