@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  assetPrefix: 'https://ikaman.duckdns.org/nextjs-app',
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
