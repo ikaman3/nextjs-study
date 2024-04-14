@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: 'https://ikaman.duckdns.org/nextjs-app',
+  assetPrefix: '/nextjs-app',
+  images: {
+    loader: 'custom',
+    loaderFile: './ImageLoader.js',
+  },
 }
 
 module.exports = nextConfig
