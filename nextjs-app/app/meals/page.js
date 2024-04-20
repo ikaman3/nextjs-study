@@ -25,7 +25,7 @@ export default function MealsPage() {
         <Link href="/meals/share">Share Your Favorite Recipe</Link>
       </p>
       <main className={classes.main}>
-        <Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
+        <Suspense fallback={<p className={classes.loading}>Fetching Meals...</p>}>
           <Meals />
         </Suspense>
       </main>
