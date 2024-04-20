@@ -14,7 +14,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "better-sqlite3": "^9.4.3",
+    "better-sqlite3": "^9.5.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.0"
   }
