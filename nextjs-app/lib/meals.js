@@ -11,3 +11,7 @@ export async function getMeals() {
   // get()은 한 개의 데이터를 fetching할 때 사용
   return db.prepare('SELECT * FROM meals').all()
 }
+
+export function getMeal(slug) {
+  return db.prepare('SELECT * FROM meals WHERE slug = ?').get(slug)
+}
