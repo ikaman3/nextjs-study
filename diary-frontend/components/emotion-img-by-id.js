@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { number } from 'prop-types'
 
 export default function EmotionImgById({ emotionId }) {
   return (
@@ -11,4 +12,8 @@ export default function EmotionImgById({ emotionId }) {
       />
     </div>
   )
+}
+
+EmotionImgById.propTypes = {
+  emotionId: number,
 }
