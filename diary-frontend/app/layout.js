@@ -7,7 +7,7 @@ const inter = Inter({
 
 export const metadata = {
   title: 'Emotion Diary',
-  description: 'Next.js를 사용한 감정 일기장 프론트엔드 프로젝트',
+  description: 'Next.js 감정 일기장 프론트엔드 프로젝트',
 }
 
 export default function RootLayout({ children }) {
