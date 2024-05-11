@@ -1,27 +1,28 @@
 import Link from 'next/link'
-import Image from 'next/image'
-
-import logoImg from '@/public/images/logo.png'
 
 export default function Home() {
   return (
     <>
-      <header className="header">
-        <Link className="logo" href="/">
-          <Image
-            src={logoImg}
-            alt="감정 일기장"
-            width={100}
-            height={100}
-            priority
-          />
-          감정 일기장
-        </Link>
-        <div className="cta"></div>
+      <header>
+        <div className="slideshow">
+          <p>대충 그럴싸한 이미지 슬라이드</p>
+        </div>
+        <div>
+          <div className="hero">
+            <h1>랜딩페이지</h1>
+            <p>아아아ㅏㅇㅇㅇ아ㅏㅏㅏㄴㅁ이ㅏ임;</p>
+          </div>
+          <div className="cta">
+            <Link href="/write">일기쓰기 </Link>
+            <Link href="/diarys">일기보기</Link>
+          </div>
+        </div>
       </header>
+      <hr />
       <main>
-        <section></section>
-        <section></section>
+        <section>
+          <h1>Main</h1>
+        </section>
       </main>
     </>
   )
