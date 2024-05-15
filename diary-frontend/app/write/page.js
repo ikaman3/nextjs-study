@@ -8,11 +8,11 @@ export default function WritePage() {
         <form>
           <div className="row">
             <p>
-              <label htmlFor="name">너는 누구인가? </label>
+              <label htmlFor="name">이름 </label>
               <input type="text" id="name" name="name" />
             </p>
             <p>
-              <label htmlFor="date">오늘의 날짜는? </label>
+              <label htmlFor="date">날짜 </label>
               <input type="text" id="date" name="date" />
             </p>
           </div>

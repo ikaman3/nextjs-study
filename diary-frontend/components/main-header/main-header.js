@@ -14,7 +14,7 @@ export default function MainHeader() {
           height={50}
           priority
         />
-        Logo 링크
+        감정일기장
       </Link>
 
       <nav>
