@@ -13,14 +13,15 @@ export default function WritePage() {
             </p>
             <p>
               <label htmlFor="date">날짜 </label>
-              <input type="text" id="date" name="date" />
+              <input type="date" id="date" name="date" />
             </p>
           </div>
           <p>
+            <p>내용</p>
             <label htmlFor="body" hidden>
               내용
             </label>
-            <input type="textarea" id="body" name="body" />
+            <textarea id="body" name="body" />
           </p>
         </form>
       </main>
