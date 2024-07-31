@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button > a {
+  color: #000000;
+}
+
+p {
+  white-space: pre-wrap;
+}
